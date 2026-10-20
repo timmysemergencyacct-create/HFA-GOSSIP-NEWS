@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HFA News</title>
+<title>📰 HFA News</title>
 
 <style>
 
@@ -12,28 +12,61 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f4f6f9;
+    background:linear-gradient(
+        -45deg,
+        #003366,
+        #00509e,
+        #1e88e5,
+        #66bbff
+    );
+    background-size:400% 400%;
+    animation:gradientMove 15s ease infinite;
     color:#333;
 }
 
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:.15;
+    pointer-events:none;
+}
+
 header{
-    background:#003366;
+    background:linear-gradient(
+        90deg,
+        #002855,
+        #00509e
+    );
     color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 header h1{
-    font-size:50px;
+    font-size:55px;
 }
 
 header p{
     margin-top:10px;
-    font-size:18px;
+    font-size:20px;
 }
 
 .live{
@@ -48,32 +81,37 @@ header p{
 }
 
 .notice{
-    background:#fff8d6;
-    border-left:6px solid #f0b400;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-left:6px solid gold;
     padding:20px;
-    border-radius:10px;
+    border-radius:20px;
     margin-bottom:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
 }
 
 .notice h3{
-    color:#a06d00;
+    color:#996600;
     margin-bottom:10px;
 }
 
 .updates{
-    background:#eaf3ff;
-    border-left:5px solid #003366;
-    padding:15px;
-    border-radius:10px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-left:6px solid #003366;
+    padding:20px;
+    border-radius:20px;
     margin-bottom:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
 }
 
 .news-card{
-    background:white;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
     padding:25px;
-    border-radius:15px;
     margin-bottom:20px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
 }
 
 .news-card h2{
@@ -84,18 +122,13 @@ header p{
 .date{
     color:gray;
     margin-bottom:15px;
-    font-size:14px;
-}
-
-.news-card p{
-    line-height:1.7;
 }
 
 .badge{
     display:inline-block;
     background:#003366;
     color:white;
-    padding:5px 12px;
+    padding:6px 12px;
     border-radius:20px;
     font-size:12px;
     margin-bottom:10px;
@@ -113,20 +146,17 @@ th{
 }
 
 td{
+    background:white;
     padding:12px;
     border-bottom:1px solid #ddd;
     text-align:center;
 }
 
-tr:hover{
-    background:#f5f5f5;
-}
-
 footer{
-    background:#003366;
+    background:#002855;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:40px;
 }
 
@@ -152,32 +182,25 @@ Latest School News & Announcements
 <h3>📢 Official Information Notice</h3>
 
 <p>
-HFA News is updated whenever official information becomes
-available from teachers, administrators, or other school personnel.
+HFA News is updated whenever official information becomes available
+from teachers, administrators, or other school personnel.
 </p>
 
 <br>
 
 <p>
-We aim to provide students and parents with accurate school news,
-announcements, schedules, events, and important reminders.
-</p>
-
-<br>
-
-<p>
-Please check this website regularly for the latest updates.
+Please check this website regularly for verified updates,
+announcements, schedules, events, and reminders.
 </p>
 
 </div>
 
 <div class="updates">
 
-<strong>Latest Update:</strong>
+<strong>📌 Latest Update:</strong>
 
-We update this website whenever we receive official news,
-announcements, reminders, or information from teachers
-or school personnel.
+We update this website whenever we receive official information
+from teachers or school personnel.
 
 </div>
 
@@ -193,15 +216,15 @@ October 19, 2026
 
 <p>
 Book Week is currently being celebrated at HFA.
-Students are encouraged to visit the library and
-discover exciting books to read.
+Students are encouraged to visit the library and discover
+exciting books to read.
 </p>
 
 <br>
 
 <p>
-Students who now have a valid library card may borrow
-books from the library according to library rules.
+Students who have a valid library card may now borrow books
+from the library according to school library rules.
 </p>
 
 <br>
@@ -214,35 +237,39 @@ Please take care of borrowed books and return them on time.
 
 <div class="news-card">
 
-<div class="badge">FIELD TRIP</div>
+<div class="badge">FIELD TRIP UPDATE</div>
 
-<h2>🚌 Field Trip Information</h2>
+<h2>🚌 Official Grade 5 Field Trip Date Announced</h2>
 
 <div class="date">
-October 19, 2026
+October 20, 2026
 </div>
 
 <p>
-There is currently no official field trip date announced.
+An official announcement regarding the Grade 5 field trip
+has been released.
 </p>
 
 <br>
 
 <p>
-We are currently waiting for additional reminders,
-updates, and announcements from teachers and school personnel.
+The Grade 5 field trip is scheduled for
+<strong>Wednesday, December 9, 2026</strong>.
 </p>
 
 <br>
 
 <p>
-Please continue checking HFA News for future updates regarding
-the field trip.
+Students and parents should watch for additional reminders,
+requirements, permission slips, and further instructions
+from teachers and school personnel.
 </p>
 
 </div>
 
 <div class="news-card">
+
+<div class="badge">OCTOBER ACTIVITY</div>
 
 <h2>🙏 October Rosary Prayers</h2>
 
@@ -251,21 +278,22 @@ October 19, 2026
 </div>
 
 <p>
-Throughout the month of October, HFA students and staff are
-participating in Rosary prayers.
+Throughout the month of October, HFA students and staff
+are participating in Rosary prayers.
 </p>
 
 <br>
 
 <p>
-This special month is dedicated to prayer, reflection,
-and strengthening our faith. Students are encouraged
-to participate respectfully during prayer sessions.
+Students are encouraged to participate respectfully during
+all prayer sessions.
 </p>
 
 </div>
 
 <div class="news-card">
+
+<div class="badge">SCHEDULE</div>
 
 <h2>📅 Grade 4, 5 & 6 Schedule</h2>
 
@@ -317,6 +345,8 @@ This schedule applies to Grade 4, Grade 5, and Grade 6 students.
 
 <div class="news-card">
 
+<div class="badge">WELCOME</div>
+
 <h2>📢 Welcome To HFA News</h2>
 
 <div class="date">
@@ -324,8 +354,9 @@ October 19, 2026
 </div>
 
 <p>
-Welcome to HFA News. This website provides school news,
-announcements, schedules, events, reminders, and community updates.
+Welcome to HFA News.
+This website provides school news, announcements,
+schedules, events, reminders, and community updates.
 </p>
 
 <br>
@@ -341,7 +372,7 @@ accurate and timely information from official school sources.
 
 <footer>
 
-HFA News © 2026
+📰 HFA News © 2026
 
 <br><br>
 
